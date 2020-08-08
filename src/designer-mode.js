@@ -10,7 +10,7 @@ import { blackboardConnect } from 'holochain-playground/blackboard/blackboard-co
 import '@authentic/mwc-card';
 
 export class DesignerMode extends blackboardConnect(
-  'holochain-playground/',
+  'holochain-playground',
   LitElement
 ) {
   static get styles() {

@@ -23,7 +23,7 @@ import './designer-mode';
 import './technical-mode';
 
 export class PlaygroundApp extends blackboardConnect(
-  'holochain-playground/',
+  'holochain-playground',
   LitElement
 ) {
   static get styles() {

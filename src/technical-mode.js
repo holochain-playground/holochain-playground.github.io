@@ -8,7 +8,7 @@ import 'holochain-playground/elements/holochain-playground-dht-stats';
 import { sharedStyles } from 'holochain-playground/elements/sharedStyles';
 
 export class TechnicalMode extends blackboardConnect(
-  'holochain-playground/',
+  'holochain-playground',
   LitElement
 ) {
   static get styles() {
