@@ -1,28 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="Description" content="Put your description here." />
+    <base href="/" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="Description" content="Put your description here.">
-  <base href="/">
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #ededed;
+        height: 100%;
+        width: 100%;
+      }
+      .fill {
+        height: 100%;
+        width: 100%;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+      }
+      .column {
+        display: flex;
+        flex-direction: column;
+      }
+      .block {
+        margin: 16px;
+      }
+    </style>
+    <title>Holochain Playground</title>
+  </head>
 
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background-color: #ededed;
-    }
-  </style>
-  <title>holochain-playground.github.io</title>
-</head>
-
-<body>
-  <holochain-playground.github.io></holochain-playground.github.io>
-
-  <script type="module" src="./out-tsc/src/holochain-playground.github.io.js"></script>
-</body>
-
+  <body>
+    <div class="fill column">
+      <mwc-top-app-bar-fixed>
+        <div slot="title">Holochain Playground</div>
+      </mwc-top-app-bar-fixed>
+      <holochain-playground-container style="flex: 1;">
+        <block-board id="block-board" style="flex: 1;"></block-board>
+<!--         <div class="column fill">
+          <div class="row" style="flex: 1">
+            <dht-cells style="flex: 1" class="block"></dht-cells>
+            <entry-graph style="flex: 1" class="block"></entry-graph>
+          </div>
+          <call-zome-fns style="flex: 1" class="block"></call-zome-fns>
+        </div>
+ -->      </holochain-playground-container>
+    </div>
+    <script type="module" src="./out-tsc/src/index.js"></script>
+  </body>
 </html>
