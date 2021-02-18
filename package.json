@@ -31,7 +31,8 @@
   "author": "holochain-playground.github.io",
   "license": "MIT",
   "dependencies": {
-    "@holochain-playground/elements": "github:holochain-playground/elements#build",
+    "@holochain-playground/elements": "git+https://github.com/holochain-playground/elements.git#build",
+    "@open-wc/scoped-elements": "^1.3.3",
     "block-board": "github:guillemcordoba/block-board#build",
     "lit-element": "^2.4.0",
     "lit-html": "^1.3.0"

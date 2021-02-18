@@ -23,37 +23,13 @@
         height: 100%;
         width: 100%;
       }
-      .row {
-        display: flex;
-        flex-direction: row;
-      }
-      .column {
-        display: flex;
-        flex-direction: column;
-      }
-      .block {
-        margin: 16px;
-      }
     </style>
     <title>Holochain Playground</title>
   </head>
 
   <body>
-    <div class="fill column">
-      <mwc-top-app-bar-fixed>
-        <div slot="title">Holochain Playground</div>
-      </mwc-top-app-bar-fixed>
-      <holochain-playground-container style="flex: 1;">
-        <block-board id="block-board" style="flex: 1;"></block-board>
-<!--         <div class="column fill">
-          <div class="row" style="flex: 1">
-            <dht-cells style="flex: 1" class="block"></dht-cells>
-            <entry-graph style="flex: 1" class="block"></entry-graph>
-          </div>
-          <call-zome-fns style="flex: 1" class="block"></call-zome-fns>
-        </div>
- -->      </holochain-playground-container>
-    </div>
+    <holochain-playground-app class="fill"></holochain-playground-app>
+
     <script type="module" src="./out-tsc/src/index.js"></script>
   </body>
 </html>
