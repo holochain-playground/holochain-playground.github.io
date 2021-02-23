@@ -5,7 +5,6 @@ import {
   DhtCells,
   EntryGraph,
   CallZomeFns,
-  EntryDetail,
 } from '@holochain-playground/elements';
 import { TopAppBarFixed } from 'scoped-material-components/mwc-top-app-bar-fixed';
 import { Button } from 'scoped-material-components/mwc-button';
@@ -18,9 +17,7 @@ export class HolochainPlaygroundApp extends ScopedElementsMixin(LitElement) {
   board!: BlockBoard;
 
   @property({ type: Boolean })
-  _editing = true;
-  @property({ type: Object })
-  _savedBlockNode: BlockNode | undefined = undefined;
+  _editing = false;
 
   renderBarItems() {
     if (!this._editing)
@@ -35,29 +32,16 @@ export class HolochainPlaygroundApp extends ScopedElementsMixin(LitElement) {
       ></mwc-button>`;
     else {
       return html`<mwc-button
-          icon="save"
-          slot="actionItems"
-          label="Save Layout"
-          .disabled=${!this.board || this.board.isEditingLayoutEmpty()}
-          class="white-button"
-          @click=${() => {
-            this._savedBlockNode = this.board.save();
-            this._editing = false;
-          }}
-        ></mwc-button>
-        ${this._savedBlockNode
-          ? html`
-              <mwc-button
-                icon="close"
-                slot="actionItems"
-                class="white-button"
-                label="Cancel"
-                @click=${() => {
-                  this._editing = false;
-                }}
-              ></mwc-button>
-            `
-          : html``} `;
+        icon="save"
+        slot="actionItems"
+        label="Save Layout"
+        .disabled=${!this.board || this.board.isEditingLayoutEmpty()}
+        class="white-button"
+        @click=${() => {
+          this.board.save();
+          this._editing = false;
+        }}
+      ></mwc-button> `;
     }
   }
 
@@ -116,7 +100,6 @@ export class HolochainPlaygroundApp extends ScopedElementsMixin(LitElement) {
       'dht-cells': DhtCells,
       'call-zome-fns': CallZomeFns,
       'entry-graph': EntryGraph,
-      'entry-detail': EntryDetail,
       'mwc-top-app-bar-fixed': TopAppBarFixed,
       'mwc-button': Button,
       'block-board': BlockBoard,

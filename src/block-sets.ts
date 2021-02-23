@@ -1,4 +1,4 @@
-import { DhtCells, CallZomeFns, EntryGraph, EntryDetail, SourceChain } from '@holochain-playground/elements';
+import { DhtCells, CallZomeFns, EntryGraph, EntryContents, SourceChain } from '@holochain-playground/elements';
 import { BlockSet } from 'block-board';
 import { render, html } from 'lit-html';
 
@@ -33,10 +33,20 @@ export const blockSets: BlockSet[] = [
       },
     ],
   },
+  {
+    name: 'Other',
+    blocks: [
+      {
+        name: 'Entry Contents',
+        render: root =>
+          render(html`<entry-contents style="margin: 8px; flex: 1;"></entry-contents>`, root),
+      },
+    ],
+  },
 ];
 
 customElements.define('dht-cells', DhtCells);
 customElements.define('source-chain', SourceChain);
 customElements.define('call-zome-fns', CallZomeFns);
 customElements.define('entry-graph', EntryGraph);
-customElements.define('entry-detail', EntryDetail);
+customElements.define('entry-contents', EntryContents);
