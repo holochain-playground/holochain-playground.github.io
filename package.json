@@ -23,7 +23,8 @@
     "format": "eslint --ext .ts,.html . --fix --ignore-path .gitignore && prettier \"**/*.ts\" --write --ignore-path .gitignore",
     "build": "rimraf dist && tsc && rollup -c rollup.config.js",
     "build-watch": "rimraf dist && concurrently -k \"tsc -w\" \"rollup -c rollup.config.js -w\"",
-    "start": "concurrently -k \"npm run build-watch\" \"wds --root-dir dist --app-index index.html --open --compatibility none\""
+    "start": "concurrently -k \"npm run build-watch\" \"wds --root-dir dist --app-index index.html --open --compatibility none\"",
+    "gh-pages": "npm run build && gh-pages -d dist/"
   },
   "name": "holochain-playground.github.io",
   "version": "0.0.0",
