@@ -1,2 +1,3 @@
-import { HolochainPlaygroundApp } from './holochain-playground-app';
-customElements.define('holochain-playground-app', HolochainPlaygroundApp);
+import { HolochainPlayground } from './holochain-playground';
+
+customElements.define('holochain-playground', HolochainPlayground);

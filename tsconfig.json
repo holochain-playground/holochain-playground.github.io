@@ -1,4 +1,4 @@
-  {
+{
   "compilerOptions": {
     "target": "es2018",
     "module": "esnext",
@@ -13,7 +13,9 @@
     "outDir": "out-tsc",
     "sourceMap": true,
     "inlineSources": true,
-    "rootDir": "./"
+    "rootDir": "./src",
+    "useDefineForClassFields": false,
+    "incremental": true
   },
-  "include": ["**/*.ts"]
+  "include": ["src/**/*.ts"]
 }
