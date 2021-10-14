@@ -35,7 +35,7 @@ export class HolochainPlayground extends ScopedElementsMixin(LitElement) {
                 }}
                 icon="menu"
               ></mwc-icon-button>
-              <div slot="title">Tragedy of the Commons - DevCamp 8 hApp</div>
+              <div slot="title">Holochain Playground</div>
             </mwc-top-app-bar>
             <golden-layout-root style="flex: 1; margin-top: 66px;">
               <golden-layout-row>

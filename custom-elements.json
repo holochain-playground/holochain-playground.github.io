@@ -27,7 +27,6 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "devcamp-eight",
           "customElement": true
         }
       ],
@@ -44,27 +43,67 @@
     },
     {
       "kind": "javascript-module",
-      "path": "out-tsc/index.js",
-      "declarations": [],
+      "path": "out-tsc/holochain-playground.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "HolochainPlayground",
+          "members": [
+            {
+              "kind": "field",
+              "name": "scopedElements",
+              "static": true
+            }
+          ],
+          "mixins": [
+            {
+              "name": "ScopedElementsMixin",
+              "package": "@open-wc/scoped-elements"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "holochain-playground",
+          "customElement": true
+        }
+      ],
       "exports": [
         {
-          "kind": "custom-element-definition",
-          "name": "devcamp-eight",
+          "kind": "js",
+          "name": "HolochainPlayground",
           "declaration": {
-            "name": "DevcampEight",
-            "module": "/out-tsc/devcamp-eight"
+            "name": "HolochainPlayground",
+            "module": "out-tsc/holochain-playground.js"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "src/devcamp-eight.ts",
+      "path": "out-tsc/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "holochain-playground",
+          "declaration": {
+            "name": "HolochainPlayground",
+            "module": "/out-tsc/holochain-playground"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/holochain-playground.ts",
       "declarations": [
         {
           "kind": "class",
           "description": "",
-          "name": "DevcampEight",
+          "name": "HolochainPlayground",
           "members": [
             {
               "kind": "field",
@@ -89,17 +128,17 @@
             "name": "LitElement",
             "package": "lit"
           },
-          "tagName": "devcamp-eight",
+          "tagName": "holochain-playground",
           "customElement": true
         }
       ],
       "exports": [
         {
           "kind": "js",
-          "name": "DevcampEight",
+          "name": "HolochainPlayground",
           "declaration": {
-            "name": "DevcampEight",
-            "module": "src/devcamp-eight.ts"
+            "name": "HolochainPlayground",
+            "module": "src/holochain-playground.ts"
           }
         }
       ]
@@ -111,10 +150,10 @@
       "exports": [
         {
           "kind": "custom-element-definition",
-          "name": "devcamp-eight",
+          "name": "holochain-playground",
           "declaration": {
-            "name": "DevcampEight",
-            "module": "/src/devcamp-eight"
+            "name": "HolochainPlayground",
+            "module": "/src/holochain-playground"
           }
         }
       ]
@@ -390,324 +429,6 @@
           "declaration": {
             "name": "get_player_profiles_for_game_code",
             "module": "out-tsc/dna/player_profile.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/dna/game_code.ts",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "get_game_code_anchor",
-          "parameters": [
-            {
-              "name": "hdk",
-              "type": {
-                "text": "Hdk.Hdk"
-              }
-            }
-          ]
-        },
-        {
-          "kind": "function",
-          "name": "create_game_code_anchor",
-          "parameters": [
-            {
-              "name": "hdk",
-              "type": {
-                "text": "Hdk.Hdk"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "get_game_code_anchor",
-          "declaration": {
-            "name": "get_game_code_anchor",
-            "module": "src/dna/game_code.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "create_game_code_anchor",
-          "declaration": {
-            "name": "create_game_code_anchor",
-            "module": "src/dna/game_code.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/dna/game_move.ts",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "new_move",
-          "parameters": [
-            {
-              "name": "hdk",
-              "type": {
-                "text": "Hdk.Hdk"
-              }
-            }
-          ]
-        },
-        {
-          "kind": "function",
-          "name": "get_moves_for_round",
-          "parameters": [
-            {
-              "name": "hdk",
-              "type": {
-                "text": "Hdk.Hdk"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "new_move",
-          "declaration": {
-            "name": "new_move",
-            "module": "src/dna/game_move.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "get_moves_for_round",
-          "declaration": {
-            "name": "get_moves_for_round",
-            "module": "src/dna/game_move.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/dna/game_round.ts",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "try_to_close_round",
-          "parameters": [
-            {
-              "name": "hdk",
-              "type": {
-                "text": "Hdk.Hdk"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "try_to_close_round",
-          "declaration": {
-            "name": "try_to_close_round",
-            "module": "src/dna/game_round.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/dna/game_session.ts",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "new_session",
-          "parameters": [
-            {
-              "name": "hdk",
-              "type": {
-                "text": "Hdk.Hdk"
-              }
-            }
-          ]
-        },
-        {
-          "kind": "function",
-          "name": "start_game_session_with_code",
-          "parameters": [
-            {
-              "name": "hdk",
-              "type": {
-                "text": "Hdk.Hdk"
-              }
-            }
-          ]
-        },
-        {
-          "kind": "function",
-          "name": "get_my_own_sessions_via_source_query",
-          "parameters": [
-            {
-              "name": "hdk",
-              "type": {
-                "text": "Hdk.Hdk"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "new_session",
-          "declaration": {
-            "name": "new_session",
-            "module": "src/dna/game_session.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "start_game_session_with_code",
-          "declaration": {
-            "name": "start_game_session_with_code",
-            "module": "src/dna/game_session.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "get_my_own_sessions_via_source_query",
-          "declaration": {
-            "name": "get_my_own_sessions_via_source_query",
-            "module": "src/dna/game_session.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/dna/index.ts",
-      "declarations": [
-        {
-          "kind": "variable",
-          "name": "gameLogicZome",
-          "type": {
-            "text": "SimulatedZome"
-          },
-          "default": "{\n  name: 'game_logic',\n  entry_defs: [\n    {\n      id: 'anchor',\n      visibility: 'Public',\n    },\n    {\n      id: 'game_code',\n      visibility: 'Public',\n    },\n    {\n      id: 'player_profile',\n      visibility: 'Public',\n    },\n    {\n      id: 'game_session',\n      visibility: 'Public',\n    },\n    {\n      id: 'game_round',\n      visibility: 'Public',\n    },\n    {\n      id: 'game_move',\n      visibility: 'Public',\n    },\n  ],\n  zome_functions: {\n    create_game_code_anchor: {\n      call:\n        hdk =>\n        async ({ short_unique_code }) =>\n          create_game_code_anchor(hdk)(short_unique_code),\n      arguments: [{ name: 'short_unique_code', type: 'string' }],\n    },\n    join_game_with_code: {\n      call:\n        hdk =>\n        async ({ nickname, game_code }) =>\n          join_game_with_code(hdk)(game_code, nickname),\n      arguments: [\n        { name: 'nickname', type: 'string' },\n        { name: 'game_code', type: 'string' },\n      ],\n    },\n    get_players_for_game_code: {\n      call:\n        hdk =>\n        async ({ short_unique_code }) =>\n          get_player_profiles_for_game_code(hdk)(short_unique_code),\n      arguments: [{ name: 'short_unique_code', type: 'string' }],\n    },\n    start_game_session_with_code: {\n      call:\n        hdk =>\n        async ({ game_code }) =>\n          start_game_session_with_code(hdk)(game_code),\n      arguments: [{ name: 'game_code', type: 'string' }],\n    },\n    get_my_owned_sessions: {\n      call: hdk => async () => get_my_own_sessions_via_source_query(hdk)(),\n      arguments: [],\n    },\n    make_new_move: {\n      call:\n        hdk =>\n        async ({ round_entry_hash, resource_amount }) =>\n          new_move(hdk)(resource_amount, round_entry_hash),\n      arguments: [\n        {\n          name: 'round_entry_hash',\n          type: 'string',\n        },\n        {\n          name: 'resource_amount',\n          type: 'number',\n        },\n      ],\n    },\n    try_to_close_round: {\n      call:\n        hdk =>\n        async ({ round_hash }) =>\n          try_to_close_round(hdk)(round_hash),\n      arguments: [{ name: 'round_hash', type: 'string' }],\n    },\n  },\n  validation_functions: {},\n}"
-        },
-        {
-          "kind": "function",
-          "name": "dna",
-          "return": {
-            "type": {
-              "text": "SimulatedDna"
-            }
-          }
-        },
-        {
-          "kind": "function",
-          "name": "happ",
-          "return": {
-            "type": {
-              "text": "SimulatedHappBundle"
-            }
-          }
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "gameLogicZome",
-          "declaration": {
-            "name": "gameLogicZome",
-            "module": "src/dna/index.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "dna",
-          "declaration": {
-            "name": "dna",
-            "module": "src/dna/index.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "happ",
-          "declaration": {
-            "name": "happ",
-            "module": "src/dna/index.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/dna/player_profile.ts",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "create_and_hash_entry_player_profile",
-          "parameters": [
-            {
-              "name": "hdk",
-              "type": {
-                "text": "Hdk.Hdk"
-              }
-            }
-          ]
-        },
-        {
-          "kind": "function",
-          "name": "join_game_with_code",
-          "parameters": [
-            {
-              "name": "hdk",
-              "type": {
-                "text": "Hdk.Hdk"
-              }
-            }
-          ]
-        },
-        {
-          "kind": "function",
-          "name": "get_player_profiles_for_game_code",
-          "parameters": [
-            {
-              "name": "hdk",
-              "type": {
-                "text": "Hdk.Hdk"
-              }
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "create_and_hash_entry_player_profile",
-          "declaration": {
-            "name": "create_and_hash_entry_player_profile",
-            "module": "src/dna/player_profile.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "join_game_with_code",
-          "declaration": {
-            "name": "join_game_with_code",
-            "module": "src/dna/player_profile.ts"
-          }
-        },
-        {
-          "kind": "js",
-          "name": "get_player_profiles_for_game_code",
-          "declaration": {
-            "name": "get_player_profiles_for_game_code",
-            "module": "src/dna/player_profile.ts"
           }
         }
       ]
