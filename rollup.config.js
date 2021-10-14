@@ -18,7 +18,7 @@ export default {
   plugins: [
     /** Enable using HTML as rollup entrypoint */
     html({
-      absoluteBaseUrl: 'https://holochain-playground.github.io/devcamp8',
+      absoluteBaseUrl: 'https://holochain-playground.github.io',
       minify: true,
     }),
     /** Resolve bare module imports */
