@@ -1,9 +1,9 @@
 import { ScopedElementsMixin } from '@open-wc/scoped-elements';
 import { LitElement, html, css } from 'lit';
 import {
-  HolochainPlaygroundGoldenLayout,
-  HolochainPlaygroundGoldenLayoutMenu,
-} from '@holochain-playground/elements';
+  SimulatedPlaygroundGoldenLayout,
+  SimulatedPlaygroundGoldenLayoutMenu,
+} from '@holochain-playground/golden-layout';
 import {
   GoldenLayoutRoot,
   GoldenLayoutStack,
@@ -51,14 +51,11 @@ export class HolochainPlayground extends ScopedElementsMixin(LitElement) {
                       <golden-layout-component
                         component-type="entry-contents"
                       ></golden-layout-component>
-                      <golden-layout-component
-                        component-type="zome-fns-results"
-                      ></golden-layout-component>
                     </golden-layout-stack>
                   </golden-layout-row>
                   <golden-layout-stack>
                     <golden-layout-component
-                      component-type="entry-graph"
+                      component-type="dht-entries"
                     ></golden-layout-component>
                     <golden-layout-component
                       component-type="source-chain"
@@ -75,7 +72,7 @@ export class HolochainPlayground extends ScopedElementsMixin(LitElement) {
 
   static get scopedElements() {
     return {
-      'holochain-playground-golden-layout': HolochainPlaygroundGoldenLayout,
+      'holochain-playground-golden-layout': SimulatedPlaygroundGoldenLayout,
       'golden-layout-root': GoldenLayoutRoot,
       'mwc-top-app-bar': TopAppBar,
       'mwc-drawer': Drawer,
@@ -85,7 +82,7 @@ export class HolochainPlayground extends ScopedElementsMixin(LitElement) {
       'golden-layout-component': GoldenLayoutComponent,
       'golden-layout-column': GoldenLayoutColumn,
       'holochain-playground-golden-layout-menu':
-        HolochainPlaygroundGoldenLayoutMenu,
+        SimulatedPlaygroundGoldenLayoutMenu,
     };
   }
 
